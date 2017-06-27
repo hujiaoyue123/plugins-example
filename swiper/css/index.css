@@ -1,0 +1,484 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, dialog, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color: transparent; /*触屏有默认样式，为防止*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border-box兼容手机不通浏览器*/
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+    -webkit-appearance: none;
+}
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+    -webkit-user-modify: read-write-plaintext-only;
+}
+
+ol, ul, li, menu {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
+    width: 100%;
+    font-size: 10px;
+    font-family: "SimHei", "Helvetica Neue", Arial, "Droid Sans", sans-serif;
+    line-height: 1;
+    color: #303030;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: 100%;
+}
+
+a, button, input {
+    outline: 0 none;
+    text-decoration: none;
+}
+
+img {
+    border: 0 none;
+    vertical-align: bottom;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.cf:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    zoom: 1;
+}
+
+/*重置样式*/
+body {
+    background-color: #FCE700;
+}
+
+.swiper-container {
+    width: 320px;
+    height: 486px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -243px;
+    margin-left: -160px;
+    overflow: visible;
+}
+
+.page1 .ren {
+    width: 293px;
+    height: 323px;
+    left: 14px;
+    bottom: 0;
+    position: absolute;
+}
+
+.page1 .kuai, .page1 .le {
+    width: 54px;
+    height: 100px;
+    display: block;
+    position: absolute;
+}
+
+.page1 .kuai {
+    top: -15px;
+    left: 5px;
+}
+
+.page1 .le {
+    top: -15px;
+    right: 5px;
+}
+
+.page1 .duanwu {
+    position: absolute;
+    width: 129px;
+    height: 46px;
+    left: 6px;
+    top: 100px;
+}
+
+.page1 .yushang {
+    position: absolute;
+    top: 100px;
+    width: 22px;
+    height: 44px;
+    left: 150px;
+}
+
+.page1 .ertong {
+    width: 129px;
+    height: 46px;
+    position: absolute;
+    top: 100px;
+    right: 6px;
+}
+
+.page1 .happy {
+    position: absolute;
+    top: 50px;
+    left: 90px;
+}
+
+.page1 .wanju {
+    position: absolute;
+    top: 150px;
+    left: 9px;
+}
+
+.page2 {
+    position: relative;
+}
+
+#audio_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 200;
+    display: none;
+    width: 30px;
+    height: 30px
+}
+
+.off {
+    background-image: url(../img/normalmusic.svg);
+    background-size: contain
+}
+
+.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    -moz-animation: rotating 1.2s linear infinite;
+    -o-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes rotating {
+    from {
+        -moz-transform: rotate(0)
+    }
+
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+/*page2*/
+.top-con {
+    padding: 0 18px;
+}
+
+.top-con .wrap {
+    margin-top: 80px;
+}
+
+.top-con .wrap .line {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.top-con .wrap .line .line2 {
+    position: absolute;
+    top: 6px;
+}
+
+.top-con .wrap .line .line3 {
+    position: absolute;
+    top: 12px;
+}
+
+.page2 .wrap p {
+    line-height: 25px;
+    font-size: 12px;
+    color: black;
+}
+
+.top-con .ren{
+    width: 121px;
+    height: 127px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.page2 .ren img {
+    width: 100%;
+    height: 100%;
+}
+/*page3*/
+.page3 ul li{
+    width: 272px;
+    height: 78px;
+    position: relative;
+    top:0;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.page3 ul img{
+    width: 100%;
+    height: 100%;
+}
+.page3 ul li .text3{
+    width: 272px;
+    height: 78px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.page3 ul li .text3 .title{
+    position: absolute;
+    left: 20px;
+    top: 28px;
+    font-size: 20px;
+}
+.page3 ul li .text3 .line{
+    width: 1px;
+    height: 45px;
+    background: black;
+    position: absolute;
+    left: 78px;
+    top: 17px;
+    font-size: 12px;
+}
+.page3 ul li .text3 .context{
+    top: 20px;
+    position: absolute;
+    right: 20px;
+    line-height: 14px;
+}
+.page3 ul li .text3 .context .title-right{
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.page3 .baoming{
+    position: absolute;
+    left: 42px;
+    bottom: 75px;
+}
+/*page4*/
+.page4 .photos{
+    position: absolute;
+}
+.page4 .photos img{
+    width: 100%;
+    height: 100%;
+}
+.page4 .photo1{
+    width: 290px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+.page4 .photo2,.page4 .photo3{
+    width: 140px;
+    height: 140px;
+    float: left;
+}
+.page4 .photo2{
+    margin-right: 10px;
+}
+/*page5*/
+.page5 img{
+    width: 100%;
+    height: 100%;
+}
+.page5 .photos{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.page5 .photos .photo1{
+    width: 290px;
+    height: 200px;
+}
+.page5 .photos .price{
+    color: rgb(235, 114, 97);
+    text-align: center;
+}
+.page5 .photos .descri{
+    text-align: center;
+    line-height: 40px;
+}
+.page5 .photos .price .btn{
+    display: inline-block;
+    width: 80px;
+    height: 33px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(235, 114, 97);
+    line-height: 33px;
+}
+/*page6*/
+.page6 .sprice ul{
+    position: relative;
+    left: 20px;
+    top:20px;
+}
+.page6 .sprice ul li{
+    width: 115px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.page6 .sprice ul li img{
+    width: 100%;
+    height: 100%;
+}
+.page6 .sprice ul li .photo{
+    width: 115px;
+    height: 80px;
+}
+.page6 .sprice ul li .des{
+    font-size: 14px;
+    margin-top: 15px;
+}
+.page6 .sprice ul li .price{
+    font-size: 12px;
+    color: rgb(235, 114, 97);
+    margin-top: 5px;
+}
+/*page7*/
+.page7 .site{
+    width: 290px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    margin-left: -145px;
+}
+.page7 .element-box{
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    border-radius: 0px;
+    border-width: 0px;
+    border-style: solid;
+    color: rgb(103, 103, 103);
+    text-align: left;
+    opacity: 1;
+    border-color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    transform: none;
+    top: 173px;
+    left: 30px;
+    animation: zoomIn 1s ease 1.5s 1 both;
+}
+.page7 .element{
+    width: 262px;
+    height: 186px;
+    position: relative;
+    background-color: rgb(229, 227, 223);
+    overflow: hidden;
+    transform: translateZ(0px);
+}
+.page7 .site-con p{
+    font-size: 14px;
+    color: black;
+    line-height:20px;
+    margin-top: 10px;
+}
+.page8 .page8-con{
+    position: relative;
+    left: 50%;
+    margin-left: -111px;
+}
+.page8 .page8-con li{
+    width: 223px;
+    height: 43px;
+    margin-bottom: 10px;
+}
+.page8 .page8-con li textarea{
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid black;
+    line-height: 23px;
+    padding: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: rgba(0,0,0,0);
+}
+.page8 .page8-con li textarea::-webkit-input-placeholder {
+    color: black;
+
+}
+.page8 .page8-con .btn{
+    width: 224px;
+    height: 43px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid black;
+}
+.page9 .page9-con ul li{
+    text-align: center;
+}
+.page9 .page9-con ul li .erweima{
+    width: 122px;
+    height: 120px;
+}
+.page9 .page9-con ul li .ct{
+    width: 86px;
+    height: 190px;
+}
+.jindu {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    z-index: 200;
+}
+
+.jindu .bar {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:white;
+}

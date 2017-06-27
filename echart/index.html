@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        #main{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="main" style="width: 1180px;height:400px;margin: 30px auto"></div>
+<script src="jquery.js"></script>
+<script type="text/javascript" src="APPzhishu.js"></script>
+<script type="text/javascript" src="echarts.common.min.js"></script>
+<script type="text/javascript">
+    myData.length=12;
+    var arrDate1=[];
+    var arrDate2=[];
+    var arrDate3=[];
+    for(var i in myData){
+        var obj=myData[i];
+        arrDate1.push(obj.Domain);
+        arrDate2.push(obj.UseNum);
+        arrDate3.push(obj.Growth);
+    }
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    var colors = ['#c3e739', '#3AE7DA'];
+    // 指定图表的配置项和数据
+    var option = {
+        color: colors,
+        title: {
+            text: '2017年4月全部行业app月度独立设备规模',
+            left: 'center'
+        },
+        itemStyle: {
+            normal: {
+                barBorderRadius: [10, 10, 0, 0]
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+        },
+        legend: {
+            data:['设备数','环比幅度'],
+            x: '70%'
+        },
+        xAxis: [{
+            data: arrDate1
+        }],
+        yAxis:  [
+            {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} 万台'
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: colors[0]
+                    }
+                },
+            },
+            {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} %'
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+            }
+        ],
+        series: [{
+            name: '设备数',
+            type: 'bar',
+            data: arrDate2,
+            barCategoryGap:'60%'
+        },
+         {
+             name:'环比幅度',
+             type:'line',
+             yAxisIndex: 1,
+             data:arrDate3,
+             smooth: true
+         }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>
